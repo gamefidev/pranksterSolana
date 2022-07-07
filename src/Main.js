@@ -64,7 +64,7 @@ const Main = () => {
               />
               <App connection={endpoint} variant={variant} title={title} /> */}
 
-              <Nav/>
+              <Nav connection={endpoint} />
               
               <Footer/>
             </Fragment>

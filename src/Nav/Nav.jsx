@@ -9,14 +9,14 @@ import {
 import Mint from "../App";
 import { Home } from "../Screens/Home.jsx";
 
-export default function Nav() {
-    console.log('working')
+export default function Nav(props) {
+    const { conn } = props;
   return (
     <Router>
         <Routes>
           <Route path="/support" element={<Support />} >
         </Route>
-          <Route path="/mint" element={<Mint variant={"success"} title={"Devnet"} />} />
+          <Route path="/mint" element={<Mint connection={props.connection} variant={"success"} title={"Devnet"} />} />
           <Route path="/" element={<Home />} />
         </Routes>
     </Router>
