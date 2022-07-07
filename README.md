@@ -1,5 +1,7 @@
-npm install
-npm start
+#step 1
+yarn install
+#step 2
+yarn start
 
 
 #################
