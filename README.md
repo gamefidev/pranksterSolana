@@ -1,6 +1,6 @@
-#step 1
+# step 1
 yarn install
-#step 2
+# step 2
 yarn start
 
 
