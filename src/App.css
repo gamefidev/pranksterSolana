@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.wallet-adapter-button.your-class-here {
+  /* These styles should have higher specificity and override the defaults */
+  background-color: blue;
+} 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,8 +41,6 @@
     transform: rotate(360deg);
   }
 }
-
-
 
 .main {
   padding: 20px;
@@ -77,4 +80,17 @@
 
 .wallet-btn {
   height: 38px;
+}
+
+.wallet-button{
+  border: 2px solid black !important;
+  color: black !important;
+  /* background-color: white !important; */
+}
+
+.wallet-button:hover {
+  /* background-color: transparent !important; */
+  border: 2px solid grey !important;
+  color: white !important;
+  /* opacity: 0.5 !important; */
 }

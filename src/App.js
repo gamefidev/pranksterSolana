@@ -129,8 +129,10 @@ function App(props) {
     var group = {};
 
     for (const nft of metadatas) {
+      //if(nftnft.data.symbol === "symb")
       if (group.hasOwnProperty(nft.data.symbol)) {
         group[nft.data.symbol].push(nft);
+        console.log("nft symbol ", nft.data.symbol);
       } else {
         group[nft.data.symbol] = [nft];
       }
@@ -145,7 +147,10 @@ function App(props) {
   const fetchMetadata = async (nftArray) => {
     let metadatas = [];
     for (const nft of nftArray) {
-      console.log(nft);
+      console.log("each nft =",nft);
+
+      // filter scary teacher NFTs only based on symbol
+      if(nft.data.symbol === "symb")
       try {
         await fetch(nft.data.uri)
           .then((response) => response.json())
@@ -316,13 +321,13 @@ function App(props) {
 
             <Link
             component={ReactRouterDomLink}
-            to='/support'
+            to='/play'
             variant="button"
             color="text.primary"
             href="#"
             sx={{ my: 1, mx: 1.5 }}
           >
-          Support
+            Play Game
           </Link>
           </nav>
         {/* <Button 
@@ -333,6 +338,7 @@ function App(props) {
           Connect Wallet
         </Button> */}
         <WalletMultiButton 
+          className="wallet-button"
           // as={Button} 
           // variant="outlined" 
           // sx={{ my: 1, mx: 1.5 }} 
@@ -354,7 +360,7 @@ function App(props) {
           <h4>Price: {price}</h4>
         </Col>
         <Col lg='2'>
-          <Button onClick={getNfts}>Show NFTs</Button>
+          <Button onClick={getNfts}>View Scary Teacher NFTs</Button>
         </Col>
         {/* <Col lg='1'>
           <Button onClick={test}>test</Button>
@@ -597,7 +603,7 @@ function App(props) {
         </div>
       )}
 
-      <Row>
+      {/* <Row>
         {!loading &&
           view === "collection" &&
           Object.keys(groupedNfts).map(
@@ -645,17 +651,17 @@ function App(props) {
               )
             )
           )}
-      </Row>
+      </Row> */}
 
       {
         <Row>
           {!loading &&
-            view === "nft-grid" &&
+            // view === "nft-grid" &&
             nfts.map((metadata, index) => (
-              <Col xs="12" md="6" lg="2" key={index}>
+              <Col xs="12" md="6" lg="4" xl="3" key={index}>
                 <Card
                   onClick={() => {
-                    console.log(nfts.length);
+                    console.log(nfts[index]);
                   }}
                   className="imageGrid"
                   lg="3"

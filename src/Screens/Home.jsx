@@ -97,13 +97,13 @@ export const Home = ()=> {
   
               <Link
               component={ReactRouterDomLink}
-              to='/support'
+              to='/play'
               variant="button"
               color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-            Support
+            Play Game
             </Link>
             </nav>
           {/* <Button 
@@ -113,7 +113,7 @@ export const Home = ()=> {
           }} href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Connect Wallet
           </Button> */}
-          <WalletMultiButton as={Button} variant="outlined" sx={{ my: 1, mx: 1.5 }} />
+          <WalletMultiButton  className="wallet-button" as={Button} variant="outlined" sx={{ my: 1, mx: 1.5 }} />
         </Toolbar>
       </AppBar>
       {/* Hero unit */}

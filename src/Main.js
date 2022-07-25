@@ -66,7 +66,7 @@ const Main = () => {
 
               <Nav connection={endpoint} />
               
-              <Footer/>
+              {/* <Footer/> */}
             </Fragment>
           </WalletModalProvider>
         </WalletProvider>
