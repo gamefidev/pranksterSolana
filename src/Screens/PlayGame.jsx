@@ -6,13 +6,10 @@ import { Link as ReactRouterDomLink } from "react-router-dom";
 import Toolbar from '@mui/material/Toolbar';
 //import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
-import GlobalStyles from '@mui/material/GlobalStyles';
 //import * as React from 'react';
 import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import { WalletButton } from "../components/WalletButton";
+
 
 export const PlayGame= () => {
     const { unityProvider } = useUnityContext({

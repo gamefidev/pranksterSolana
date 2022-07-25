@@ -7,25 +7,11 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Unity, useUnityContext } from "react-unity-webgl";
-//import Index from "./index.html";
 import Mint from "../App";
 import { Home } from "../Screens/Home.jsx";
 import { PlayGame } from "../Screens/PlayGame";
 import "./Nav.css";
 
-import { WalletMultiButton, } from "@solana/wallet-adapter-react-ui";
-import { Link as ReactRouterDomLink } from "react-router-dom";
-import Toolbar from '@mui/material/Toolbar';
-//import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import GlobalStyles from '@mui/material/GlobalStyles';
-//import * as React from 'react';
-import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import { WalletButton } from "../components/WalletButton";
 
 export default function Nav(props) {
   const { conn } = props;
